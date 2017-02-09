@@ -34,12 +34,6 @@ class CocktailsIndex extends React.Component {
 )}
 };
 
-function mapStateToProps(state){
-  return {
-    cocktails: state.cocktails
-  }
-}
-
 function mapDispatchToProps(dispatch){
   return {
     showCocktail: function(id) {
@@ -48,6 +42,13 @@ function mapDispatchToProps(dispatch){
     }
   }
 }
+
+function mapStateToProps(state){
+  return {
+    cocktails: state.cocktails
+  }
+}
+
 
 const componentCreator = connect(mapStateToProps,mapDispatchToProps)
 export default componentCreator(CocktailsIndex);
