@@ -9,6 +9,13 @@ export function fetchCocktails(){
   }
 }
 
+export function updateCurrentCocktail(id){
+    return {
+    type: 'UPDATE_CURRENT_COCKTAIL',
+    payload: id
+  }
+}
+
 export function createCocktail(params){
   const cocktail = fetch(`${BASE_URL}/cocktails`,
     {method: 'POST',
